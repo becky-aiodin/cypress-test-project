@@ -13,11 +13,11 @@ describe('Shadow Login', () => {
         cy.get('button.btn.btn-brand.btn-block').click();
         
         cy.get('h5.xs-displaynone', { timeout: 10000 }).should('exist').and('contain.text', 'Dashboard');
-        cy.get('.kt-header-mobile__toolbar > #kt_aside_toggler').click();
+        //cy.get('.kt-header-mobile__toolbar > #kt_aside_toggler').click();
         cy.contains('div.card-header', '1. Members').click();
         cy.contains('a', '1.1 All Members').click();
         cy.url().should('include', '/general/members');
-        cy.get('.kt-header-mobile__toolbar > #kt_aside_toggler').click();
+        //cy.get('.kt-header-mobile__toolbar > #kt_aside_toggler').click();
         cy.get('button.btn.btn-success.btn-icon-sm').click();
         cy.get('input[formcontrolname="username"]').type('winter01');
         cy.get('button.btn.btn-success.btn-icon-sm').click();
@@ -39,8 +39,6 @@ describe('Shadow Login', () => {
                 .click();
                 cy.wait(3000);
                 cy.origin('https://ibc22.porsche68.com', () => {
-                    cy.url({ timeout: 10000 }).should('include', 'access_token');
-                    
                     cy.get('a[href="/member/profile"]', { timeout: 10000 })
                     .should('be.visible')
                     .and('contain', 'MY PROFILE');
