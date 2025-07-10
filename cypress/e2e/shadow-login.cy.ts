@@ -1,5 +1,5 @@
 describe('Shadow Login', () => {
-    const baseUrl = 'https://ibc22bo.porsche68.com/';
+    const baseUrl = 'https://ibc22bo.porsche68.com';
     const username = 'becky'
     const password = 'Aabbcc123@'
     

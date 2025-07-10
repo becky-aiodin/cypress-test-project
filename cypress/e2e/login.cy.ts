@@ -1,10 +1,10 @@
-describe('Login', () => {
-    const baseUrl = 'https://ibc22.porsche68.com/';
+describe.only('Login', () => {
+    const baseUrl2 = 'https://ibc22.porsche68.com';
     const username = 'testcheck01'
     const password = '123123'
     
-    it('Registers a new user and logs in successfully', () => {
-        cy.visit('/');
+    it('Existing user login successfully', () => {
+        cy.visit(`${baseUrl2}`);
         cy.document().its('readyState').should('eq', 'complete');
         cy.window().should('have.property', 'location');
 

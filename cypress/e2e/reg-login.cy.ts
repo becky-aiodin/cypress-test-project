@@ -1,4 +1,4 @@
-describe.only('Registration and Login', () => {
+describe('Registration and Login', () => {
   const url = Cypress.config().baseUrl;
   const randomUsername = generateUsername();
   const phone = generateRandomPhoneNumber();
